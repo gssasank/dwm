@@ -2,6 +2,10 @@
 
 ## dwm is an extremely fast, small, and dynamic window manager for X.
 
+
+![image](https://user-images.githubusercontent.com/62089940/147846815-362030e1-72ab-4e0c-a073-1e03e4edba42.png)
+
+
 This is my patched version of Suckless's (in)famous window manager. 
 
 - The top-bar works well with glyphs and emojis.
@@ -67,6 +71,7 @@ If you want to further customize this version, it is done by creating a custom c
 
 ## To-Do
 <!-- ------------- -->
-- To add clickablity to the top bar by applying appropriate patches.
-- To add a better notification management system.
+- Add clickablity to the top bar by applying appropriate patches.
+- Add a better notification management system.
+- Add a compositor for transparency. 
 
