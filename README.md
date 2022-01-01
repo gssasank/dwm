@@ -4,14 +4,14 @@
 
 This is my patched version of Suckless's (in)famous window manager. 
 
-The top-bar works well with glyphs and emojis.
-Keyboard controlled volume, brightness etc are already patched in.
-Highly recommend to use NerdFonts to properly display glyphs, emojis etc. 
-For wallpapers, use `feh` and source `~/.fehbg &` from your `.xinitrc`
-Default terminal emulator is set as kitty (can be changed in config.h).
+- The top-bar works well with glyphs and emojis.
+- Keyboard controlled volume, brightness etc are already patched in.
+- Highly recommend to use NerdFonts to properly display glyphs, emojis etc. 
+- For wallpapers, use `feh` and source `~/.fehbg &` from your `.xinitrc`
+- Default terminal emulator is set as kitty (can be changed in config.h).
 
 ## Requirements
-------------
+<!-- ------------ -->
 In order to build dwm you need the `Xlib` header files.
 
 dmenu, another Suckless utility, is used to launch applications. It is available in most package managers or can be built from source.
@@ -22,7 +22,7 @@ If you are on Arch Linux, you can get the patched version `libxft-bgra-git` from
 
 
 ## Installation
-------------
+<!-- ------------ -->
 Edit config.mk to match your local setup (dwm is installed into the /usr/local namespace by default).
 
 Afterwards enter the following command to build and install dwm (if necessary as root):
@@ -31,7 +31,7 @@ Afterwards enter the following command to build and install dwm (if necessary as
 
 
 ## Running dwm
------------
+<!-- ----------- -->
 Add a `dwm.desktop` file in your `/usr/share/xsessions` directory with the following contents if you are using gdm (Gnome Desktop Manager):
 
 ```
@@ -62,11 +62,11 @@ Or, you can use `arandr` (GUI client for `xrandr`) to configure your displays.
 
 
 ## Configuration
--------------
+<!-- ------------- -->
 If you want to further customize this version, it is done by creating a custom config.h and (re)compiling the source code.
 
 ## To-Do
--------------
+<!-- ------------- -->
 - To add clickablity to the top bar by applying appropriate patches.
 - To add a better notification management system.
 
