@@ -78,5 +78,5 @@ If you want to further customize this version, it is done by creating a custom c
 ## Resources
 The documentation for dwm and all its patches is extremely good.
 
-[Luke Smith]https://www.youtube.com/c/LukeSmithxyz, [Mental Outlaw]https://www.youtube.com/c/MentalOutlaw and [DT]https://www.youtube.com/c/DistroTube are great people with amazing tutorials.
+[Luke Smith](https://www.youtube.com/c/LukeSmithxyz), [Mental Outlaw](https://www.youtube.com/c/MentalOutlaw) and [DT](https://www.youtube.com/c/DistroTube) are great people with amazing tutorials.
 
