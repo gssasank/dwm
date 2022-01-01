@@ -66,8 +66,8 @@ static const char *codecmd[]  = { "code", NULL };
  * F1 for mute, F2 for decrease and F3 for increase
  * Mod should be pressed ofcourse.
  */
-static const char *upvol[]   = { "amixer", "set", "Master", "2+",     NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "2-",     NULL };
+static const char *upvol[]   = { "amixer", "set", "Master", "3+",     NULL };
+static const char *downvol[] = { "amixer", "set", "Master", "3-",     NULL };
 static const char *mutevol[] = { "amixer", "set", "Master", "toggle", NULL };
 
 
@@ -100,11 +100,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,             		XK_Left, 	   shiftview,      {.i = +1 } },
-	{ MODKEY,             		XK_Right,      shiftview,      {.i = -1 } },
-	{ MODKEY,                       XK_F1,    spawn,          {.v = upvol   } },
-	{ MODKEY,                       XK_F2,    spawn,          {.v = downvol } },
-	{ MODKEY,                       XK_F3,     spawn,         {.v = mutevol } },
+	{ MODKEY,             		XK_Right, 	   shiftview,      {.i = +1 } },
+	{ MODKEY,             		XK_Left,      shiftview,      {.i = -1 } },
+	{ MODKEY,                       XK_F11,    spawn,          {.v = upvol   } },
+	{ MODKEY,                       XK_F12,    spawn,          {.v = downvol } },
+	{ MODKEY,                       XK_F1,     spawn,         {.v = mutevol } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
