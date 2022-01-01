@@ -1,29 +1,55 @@
 # dwm - dynamic window manager
 
-dwm is an extremely fast, small, and dynamic window manager for X.
+## dwm is an extremely fast, small, and dynamic window manager for X.
 
+This is my patched version of Suckless's (in)famous window manager. 
+
+The top-bar works well with glyphs and emojis.
+Keyboard controlled volume, brightness etc are already patched in.
+Highly recommend to use NerdFonts to properly display glyphs, emojis etc. 
+For wallpapers, use `feh` and source `~/.fehbg &` from your `.xinitrc`
+Default terminal emulator is set as kitty (can be changed in config.h).
 
 ## Requirements
 ------------
-In order to build dwm you need the Xlib header files.
+In order to build dwm you need the `Xlib` header files.
+
+dmenu, another Suckless utility, is used to launch applications. It is available in most package managers or can be built from source.
+
+You also will need a patched version of `libxft` as it does not have emoji support baked into it.
+If you are on Arch Linux, you can get the patched version `libxft-bgra-git` from the AUR.
+(i use arch, btw)
 
 
 ## Installation
 ------------
-Edit config.mk to match your local setup (dwm is installed into
-the /usr/local namespace by default).
+Edit config.mk to match your local setup (dwm is installed into the /usr/local namespace by default).
 
-Afterwards enter the following command to build and install dwm (if
-necessary as root):
+Afterwards enter the following command to build and install dwm (if necessary as root):
 
     make clean install
 
 
 ## Running dwm
 -----------
-Add the following line to your .xinitrc to start dwm using startx:
+Add a `dwm.desktop` file in your `/usr/share/xsessions` directory with the following contents if you are using gdm (Gnome Desktop Manager):
+
+```
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dwm
+Comment=Dynamic window manager
+Exec=dwm
+Icon=dwm
+Type=XSession
+```
+
+Or add the following line to your .xinitrc to start dwm if you are using startx:
 
     exec dwm
+
+In order to display status info in the bar, checkout my other repo: dwmblocks
+You can customize required modules in the top (battery, time, volume etc.) bar by simply editing shell scripts.
 
 In order to connect dwm to a specific display, make sure that
 the DISPLAY environment variable is set correctly, e.g.:
@@ -32,17 +58,15 @@ the DISPLAY environment variable is set correctly, e.g.:
 
 (This will start dwm on display :1 of the host foo.bar.)
 
-In order to display status info in the bar, you can do something
-like this in your .xinitrc:
-
-    while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-    do
-    	sleep 1
-    done &
-    exec dwm
+Or, you can use `arandr` (GUI client for `xrandr`) to configure your displays.
 
 
 ## Configuration
 -------------
-The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
+If you want to further customize this version, it is done by creating a custom config.h and (re)compiling the source code.
+
+## To-Do
+-------------
+- To add clickablity to the top bar by applying appropriate patches.
+- To add a better notification management system.
+
