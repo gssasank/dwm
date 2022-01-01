@@ -23,7 +23,7 @@ If you are on Arch Linux, you can get the patched version `libxft-bgra-git` from
 
 ## Installation
 <!-- ------------ -->
-Edit config.mk to match your local setup (dwm is installed into the /usr/local namespace by default).
+Edit config.mk to match your local setup (dwm is installed into the `/usr/local` namespace by default).
 
 Afterwards enter the following command to build and install dwm (if necessary as root):
 
