@@ -13,6 +13,7 @@ This is my patched version of Suckless's (in)famous window manager.
 - Highly recommend to use NerdFonts to properly display glyphs, emojis etc. 
 - For wallpapers, use `feh` and source `~/.fehbg &` from your `.xinitrc`
 - Default terminal emulator is set as kitty (can be changed in config.h).
+- Screenshots using `flameshot`. Install it using your package manager.
 
 ## Requirements
 <!-- ------------ -->
